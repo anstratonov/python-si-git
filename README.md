@@ -14,7 +14,13 @@ pip install -r requirements.txt
 
 * Запуск веб-сервиса
 ```
-FLASK_APP=main.py flask run
 export FLASK_ENV=development
 flask run
 ```
+
+## Ветки
+
+* base - базовая версия
+* db - версия с подключенной базой данных
+* tests - версия, покрытая тестами
+* 

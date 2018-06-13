@@ -1,8 +1,9 @@
 # Шаблон приложения для летнего интенсива
 
-## Материалы
+## Технологии
 
-* [Официальный сайт](http://flask.pocoo.org/)
+* [Flask](http://flask.pocoo.org/)
+* [Bootstrap](https://getbootstrap.com)
 
 ## Запуск
 ```

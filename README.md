@@ -11,10 +11,12 @@
 ```
 pip install -r requirements.txt
 ```
-
-* Запуск веб-сервиса
+* Включение DEBUG-режима
 ```
 export FLASK_ENV=development
+```
+* Запуск веб-сервиса
+```
 flask run
 ```
 

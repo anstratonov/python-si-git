@@ -15,5 +15,6 @@ pip install -r requirements.txt
 * Запуск веб-сервиса
 ```
 FLASK_APP=main.py flask run
-
+export FLASK_ENV=development
+flask run
 ```

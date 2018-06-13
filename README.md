@@ -48,6 +48,7 @@ flask run
 * функции
   * создание, использование
   * области видимости
+  * func(func2(something))
 * list
   * append
   * reversed

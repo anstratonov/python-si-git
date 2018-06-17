@@ -1,8 +1,8 @@
 import datetime
+import functools
 
 from flask import (Flask, request, render_template,
                    redirect, url_for, flash)
-
 
 app = Flask(__name__)
 app.secret_key = b'simbirsoft73(*&13%*$&^#'
@@ -28,11 +28,28 @@ posts = [
     },
 ]
 
+ad_type = ('type1', 'type2')
+
+ads = [
+    {
+        'type': ad_type[0],
+        'title': 'SimbirSoft',
+        'subtitle': 'Работаем с 2001 года',
+        'text': 'Разрабатывает уникальные программные решения для компаний из России, США и стран Европы.',
+        'link': 'https://www.simbirsoft.com/'
+    },
+    {
+        'type': ad_type[1],
+        'text': 'Python',
+        'image': 'https://www.python.org/static/img/python-logo@2x.png'
+    }
+    # TODO Задание для занятия по git
+    # Добавить сюда новую информацию о объявлении, на подобии выше
+]
 
 @app.route('/')
 def index():
-    return render_template('posts.html', posts=reversed(posts))
-
+    return render_template('posts.html', posts=reversed(posts), ads = ads)
 
 @app.route('/add_post', methods=['POST', 'GET'])
 def add_post():
@@ -63,4 +80,4 @@ def user(user):
 
 @app.route("/about")
 def about():
-    return render_template('about.html')
+    return render_template('about.html', ads = ads)

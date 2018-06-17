@@ -30,25 +30,32 @@
       </div>
     </nav>
 
-    <main role="main" class="container">
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          {% for message in messages %}
-            <div class="alert alert-primary role="alert">
-              {{ message}}
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
+    <main role="main" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-9">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-primary role="alert">
+                  {{ message}}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
 
-      <h1>
-        {% block h1 %}
-        {% endblock %}
-      </h1>
-      <hr>
+          <h1>
+            {% block h1 %}
+            {% endblock %}
+          </h1>
+          <hr>
 
-      {% block content %}
-      {% endblock %}
+          {% block content %}
+          {% endblock %}
+        </div>
+        <div class="col-sm-3">
+          {% include 'ads.html' %}
+        </div>
+      </div>
     </main>
 
 

@@ -7,14 +7,17 @@
 {% block content %}
   {% for post in posts %}
     <div class='blog-post'>
-      <h3>{{ post.name }}</h3>
+      <h3>{{ post.title }}</h3>
       <p>
         <span class="text-muted">
-        {{ post.date }} by
+        {{ post.created }} / автор:
         </span>
-        <a href="/author/{{ post.author }}">{{ post.author }}</a></p>
-        <i> {{ post.category }}</i>
-      <p>{{ post.content }}</p>
+        <a href="/author/{{ post.author }}">{{ post.author }}</a>
+        <span class="text-muted">
+        / тема: {{ post.topic }}
+        </span>
+      </p>
+      <p>{{ post.body }}</p>
     </div>
     <hr>
   {% endfor %}

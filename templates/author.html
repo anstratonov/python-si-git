@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block h1 %}
-Посты пользователя {{ user }}
+Посты пользователя {{ author }}
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@
         <span class="text-muted">
         {{ post.date }} by
         </span>
-        <a href="/user/{{ post.user }}">{{ post.user }}</a></p>
+        <a href="/author/{{ post.author }}">{{ post.author }}</a></p>
         <i> {{ post.category }}</i>
       <p>{{ post.content }}</p>
     </div>

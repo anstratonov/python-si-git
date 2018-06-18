@@ -27,23 +27,14 @@ posts = [
     },
 ]
 
-ad_type = ('type1', 'type2')
-
 ads = [
     {
-        'type': ad_type[0],
         'title': 'SimbirSoft',
         'subtitle': 'Работаем с 2001 года',
         'text': 'Разрабатывает уникальные программные решения для компаний из России, США и стран Европы.',
         'link': 'https://www.simbirsoft.com/'
-    },
-    {
-        'type': ad_type[1],
-        'text': 'Python',
-        'image': 'https://www.python.org/static/img/python-logo@2x.png'
     }
-    # TODO Задание для занятия по git
-    # Добавить сюда новую информацию о объявлении, на подобии выше
+    # TODO Добавить сюда новую объявление
 ]
 
 @app.route('/')

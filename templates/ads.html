@@ -1,5 +1,4 @@
 {% for ad in ads %}
-  {% if ad.type == 'type1' %}
   <div class="card" style="width: 18rem; margin-bottom: 5px;">
     <div class="card-body">
       <h5 class="card-title">{{ ad.title }}</h5>
@@ -8,13 +7,5 @@
       <a href="#" class="card-link">{{ ad.link }}</a>
     </div>
   </div>
-  {% elif ad.type == 'type2' %}
-  <div class="card" style="width: 18rem; margin-bottom: 5px;">
-    <img class="card-img-top" src="{{ ad.image }}">
-    <div class="card-body">
-      <p class="card-text">{{ ad.text }}</p>
-    </div>
-  </div>
-  <!-- Добавить еще какой нибудь тип карточки, можно посмотреть на https://getbootstrap.com/docs/4.1/components/card/ -->
-  {% endif %}
+  <!-- TODO Добавить еще одно объявление -->
 {% endfor %}

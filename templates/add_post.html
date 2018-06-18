@@ -7,12 +7,21 @@
 {% block content %}
   <form method="post">
     <div class="form-group">
-      <label for="user">Имя</label>
-      <input type="text" class="form-control" id="user" name="user" placeholder="Ваше имя">
+      <label for="author">Автор</label>
+      <input type="text" class="form-control" id="author" name="author" placeholder="Ваше имя">
     </div>
     <div class="form-group">
       <label for="name">Название</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Название поста">
+    </div>
+    <div class="form-group">
+      <label for="category">Категория</label>
+      <select class="form-control" name="category">
+        <option>Управление</option>
+        <option>Развитие</option>
+        <option>Природа</option>
+        <option>Спорт</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="content">Пост</label>
